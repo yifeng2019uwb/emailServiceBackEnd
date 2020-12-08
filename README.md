@@ -19,35 +19,35 @@ What things you need to install the software and how to setup your system
 In this project, using Spring boot framework with dependencies: amazon SES, sendgrid
 
 ## Architecture: 
-    ### Model: 
+    Model: 
         EmailRequest: email format - accept the request from the front-end 
         EmailResponse: email response - return json data for front-end 
-    ### Service: 
+    Service: 
         SendEmailService: Interface - service for api 
         SendEmailServiceImpl: Service Implmentation with 2 email providers 
         EmailServiceProvider: Interface - specification for email service provider 
         AmazonSESEmailProvider: Service, which is primary Email Service Provider by using annotation @Qualifier("primaryEmailServiceProvider") 
         SendGridEmailProvider: Service, which is secondary Email Service Provider by using annotation @Qualifier("secondaryEmailServiceProvider") 
     <Note: It's OOP polymorphism - using Interface, so you can change your implementation/email provider without rewrite the other code(loose coupling) > 
-    ### Controller:
+    Controller:
         SendEmailController: Api/endpoint 
-    ### xception: 
+    Exception: 
         SendEmailExceptionHandler(@ControllerAdvice): handle all exceptions 
         BadRequestException: handle BadRequestException with details of the error 
         EmailServiceProviderException: handle the other service provider exceptions 
-    ### Config: 
+    Config: 
         ProviderConfiguration: all Emailproviders configuration(beans) 
         AmazonSESConfiguration: config amazonses service provider 
         SendGridConfiguration: config sendgrid service provider
 
-##Test: 
+## Test: 
     1. Unit Test: 
         ControllerTest: Test controller 
         EmailServiceTest: Test SendEmailService 
     2. Integration Test: 
         ApiIntegrationTest: api integration
 
-##Development and further improvements
+## Development and further improvements
 1.  Modify the email request with more data: ccs, bccs and attachment files
 2.  Add email history into database
 3.  Add the front-end part
