@@ -9,11 +9,11 @@ Amazon SES - Simple Send Documentation
 
 ## Prerequisites 
 What things you need to install the software and how to setup your system 
-    Java 11 - Latest 
-    Maven 
-    IntelliJDEA 
-    SendGrid email service credentials 
-    Amazon SES email service credentials
+    Java 11 - Latest    
+    Maven    
+    IntelliJDEA     
+    SendGrid email service credentials   
+    Amazon SES email service credentials    
 
 ## Project Framework 
 In this project, using Spring boot framework with dependencies: amazon SES, sendgrid
