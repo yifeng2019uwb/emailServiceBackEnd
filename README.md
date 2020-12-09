@@ -4,7 +4,7 @@ Create a service that accepts the necessary information and sends emails.
 It should provide an abstraction between two different email service providers. If one of the services goes down, your service can quickly failover to a different provider without affecting your customers.
 
 ## Example Email Providers(Choose 2 popular email providers): 
-SendGrid - Simple Send Documentation 
+SendGrid - Simple Send Documentation    
 Amazon SES - Simple Send Documentation
 
 ## Prerequisites 
